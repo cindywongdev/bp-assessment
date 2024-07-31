@@ -6,10 +6,7 @@
   --accent-yellow: #f9b712;
   --accent-red: #c31030;
   --font-size-h1: 3rem;
-  //   --font-size-h2: 1.5rem;
   --font-weight-h1: 600;
-  //   --font-weight-h2: semi-bold;
-  //   --font-weight-h3: normal;
   --default-font-family: 'Oswald', sans-serif;
   --default-font-family-body: 'Arial', sans-serif;
   --default-font-weight: 500;
@@ -17,8 +14,6 @@
   --dark-text-color: var(--darkest-blue);
   --black-text-color: black;
   --box-shadow-color: rgba(48, 48, 48, 0.75);
-  /* --spacing-small: 10px;
-  --spacing-medium: 20px; */
   --default-transition-time: 0.2s;
 }
 
@@ -26,10 +21,6 @@
   font-family: var(--default-font-family);
   font-weight: var(--default-font-weight);
   color: var(--default-text-color);
-}
-
-body {
-  // background: var(--dark-blue); // remove this?
 }
 
 h1 {
@@ -181,7 +172,6 @@ nav {
   }
 
   .donation-links-container {
-    // border: 1px solid red;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

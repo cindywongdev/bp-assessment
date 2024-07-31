@@ -14,8 +14,6 @@
   --dark-text-color: var(--darkest-blue);
   --black-text-color: black;
   --box-shadow-color: rgba(48, 48, 48, 0.75);
-  /* --spacing-small: 10px;
-  --spacing-medium: 20px; */
   --default-transition-time: 0.2s;
 }
 
