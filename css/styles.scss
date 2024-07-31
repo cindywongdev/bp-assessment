@@ -5,41 +5,54 @@
   --light-blue: #6dd7ff;
   --accent-yellow: #f9b712;
   --accent-red: #c31030;
-//   --font-size-h1: 2rem;
-//   --font-size-h2: 1.5rem;
-//   --font-weight-h1: bold;
-//   --font-weight-h2: semi-bold;
-//   --font-weight-h3: normal;
+  --font-size-h1: 3rem;
+  //   --font-size-h2: 1.5rem;
+  --font-weight-h1: 600;
+  //   --font-weight-h2: semi-bold;
+  //   --font-weight-h3: normal;
   --default-font-family: 'Oswald', sans-serif;
+  --default-font-family-body: 'Arial', sans-serif;
   --default-font-weight: 450;
+  --default-text-color: white;
+  --box-shadow-color: rgb(100, 100, 100);
   /* --spacing-small: 10px;
   --spacing-medium: 20px; */
 }
 
 * {
-    font-family: var(--default-font-family);
-    font-weight: var(--default-font-weight);
+  font-family: var(--default-font-family);
+  font-weight: var(--default-font-weight);
+  color: var(--default-text-color);
 }
 
-/* remove this? */
 body {
-  background-color: blue;
-  color: white;
+  background: var(--dark-blue); // remove this?
 }
 
-a, button {
-  :hover{
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-h1);
+}
+
+a,
+button {
+  :hover {
     cursor: pointer;
   }
 }
 
 nav {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 1000;
   background: linear-gradient(to right, var(--dark-blue), var(--medium-blue));
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 3rem 1rem 3rem;
- 
+  padding: 1rem 3rem;
+  box-shadow: 0 5px 5px var(--box-shadow-color);
+
   .logo {
     width: 10rem;
   }
@@ -48,28 +61,112 @@ nav {
     list-style: none;
     display: flex;
     align-items: center;
-    // gap: 2rem;
 
     .user-action-buttons {
-        a {
-            padding: 5px 30px 5px 30px;
-            border-radius: 10rem;
-            margin-right: 20px;
-        }
+      a {
+        padding: 5px 30px;
+        border-radius: 10rem;
+        margin-right: 20px;
+      }
 
-        #nav-volunteer-link {
-            background-color: var(--accent-yellow);
-            color: var(--darkest-blue);
-        }
-        #nav-donate-link {
-            background-color: var(--accent-red);
-        }
+      #nav-volunteer-link {
+        background-color: var(--accent-yellow);
+        color: var(--darkest-blue);
+      }
+
+      #nav-donate-link {
+        background-color: var(--accent-red);
+      }
     }
 
     .social-icons a {
-        margin-right: -5px;
+      margin-right: -15px;
     }
   }
 }
 
-/*# sourceMappingURL=styles.scss.map */
+#hero {
+  height: 80vh;
+
+  .hero-form-container {
+    position: absolute;
+    background: linear-gradient(to top right, var(--dark-blue) 20%, var(--medium-blue) 60%, var(--accent-yellow));
+    height: 100%;
+    width: 45%;
+    clip-path: polygon(0% 0%, 0% 80%, 100% 80%, 65% 0%);
+    padding: 7rem 6rem 3rem 3rem;
+
+    .logo {
+      width: 17rem;
+    }
+
+    h1 {
+      margin: 3rem 0 1rem 0;
+      line-height: 1;
+    }
+
+    form {
+      display: grid;
+      grid-template:
+        "email email" auto
+        "phone zip" auto
+        "signup signup" auto;
+      gap: 10px;
+      width: 75%;
+
+      input {
+        border: 2px solid white;
+        height: 3rem;
+        padding: 0 1rem;
+        background-color: rgba(255, 255, 255, 0.25);
+        font-family: var(--default-font-family-body);
+      }
+
+      input::placeholder {
+        color: white;
+      }
+
+      #email {
+        grid-column: 1 / -1;
+        grid-row: 1;
+      }
+
+      #phone {
+        grid-column: 1 / 2;
+        grid-row: 2;
+      }
+
+      #zip {
+        grid-column: 2 / -1;
+        grid-row: 2;
+      }
+
+      button {
+        grid-column: 1 / -1;
+        grid-row: 3;
+        height: 3rem;
+        border: none;
+        border-radius: 2rem;
+        color: var(--darkest-blue);
+        background-color: var(--light-blue);
+        font-size: 1.2rem;
+        font-weight: 700;
+
+        :hover{
+          cursor: pointer;
+        }
+      }
+    }
+
+    form button[type="submit"] {
+      cursor: pointer;
+    }
+  }
+
+  #hero-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
