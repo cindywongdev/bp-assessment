@@ -12,8 +12,10 @@
   //   --font-weight-h3: normal;
   --default-font-family: 'Oswald', sans-serif;
   --default-font-family-body: 'Arial', sans-serif;
-  --default-font-weight: 450;
+  --default-font-weight: 500;
   --default-text-color: white;
+  --dark-text-color: var(--darkest-blue);
+  --black-text-color: black;
   --box-shadow-color: rgba(48, 48, 48, 0.75);
   /* --spacing-small: 10px;
   --spacing-medium: 20px; */
@@ -190,7 +192,7 @@ nav {
     margin-top: 2rem;
 
     a {
-      width: 45%;
+      width: 30vw;
       border: 3px solid var(--light-blue);
       background-color: var(--darkest-blue);
 
@@ -215,26 +217,57 @@ nav {
         transition: var(--default-transition-time);
       }
     }
+  }
+}
 
-    // display: grid;
-    // grid-template-areas:
-    //   "twentyFive other"
-    //   "fifty oneHundred";
+#about {
+  border: 5px solid purple;
+  margin: 5rem 13rem; 
 
-    // .donation-link-25 {
-    //   grid-area: twentyFive;
-    // }
+  h1{
+    color: var(--dark-text-color);
+    margin-bottom: 3rem;
+  }
 
-    // .donation-link-other {
-    //   grid-area: other;
-    // }
+  img {
+    height: 40vh;
+    min-height: 300px;
+  }
 
-    // .donation-link-50 {
-    //   grid-area: fifty;
-    // }
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
 
-    // .donation-link-100 {
-    //   grid-area: oneHundred;
-    // }
+  .about-section-1 {
+    margin-bottom: 5rem;
+
+    .about-section-banner {
+      background: linear-gradient(60deg, var(--darkest-blue) 70%, var(--accent-yellow));
+      opacity: 83%;
+      height: 120px;
+      padding: 1.3rem 6rem 1.3rem 2rem;
+      position: relative;
+      left: -40px;
+
+      p {
+        font-family: var(--default-font-family-body);
+        font-size: 1.5rem;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  .about-section-2 {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    p {
+      color: var(--black-text-color);
+      font-family: var(--default-font-family-body);
+      height: 40vh;
+      max-width: 40%;
+    }
   }
 }
