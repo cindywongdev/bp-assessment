@@ -1,0 +1,27 @@
+/* Remove default margin and padding from all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure consistent border and box sizing across all elements */
+html {
+    box-sizing: border-box;
+}
+
+/* Inherit box-sizing from parent elements */
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+/* Remove default text decoration and color for links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Ensure consistent font inheritance for form elements */
+input, button, textarea, select {
+    font: inherit;
+}
