@@ -14,7 +14,7 @@
   --dark-text-color: var(--darkest-blue);
   --black-text-color: black;
   --box-shadow-color: rgba(48, 48, 48, 0.75);
-  --default-transition-time: 0.2s;
+  --default-transition-time: 0.3s;
 }
 
 * {
@@ -68,13 +68,31 @@ nav {
         color: var(--darkest-blue);
       }
 
+      #nav-volunteer-link:hover {
+        background-color: var(--light-blue);
+        transition: var(--default-transition-time);
+      }
+
       #nav-donate-link {
         background-color: var(--accent-red);
       }
+
+      #nav-donate-link:hover {
+        background-color: var(--light-blue);
+        transition: var(--default-transition-time);
+      }
     }
 
-    .social-icons a {
-      margin-right: -15px;
+    .social-icons {
+      a {
+        margin-right: -15px;
+      }
+      
+      a:hover {
+        position: relative;
+        bottom: 3px;
+        transition: var(--default-transition-time);
+      }
     }
   }
 }
@@ -298,6 +316,11 @@ footer {
 
     a {
       text-decoration: underline;
+    }
+
+    a:hover {
+      color: var(--light-blue);
+      transition: var(--default-transition-time);
     }
   }
 }

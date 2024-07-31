@@ -14,7 +14,7 @@
   --dark-text-color: var(--darkest-blue);
   --black-text-color: black;
   --box-shadow-color: rgba(48, 48, 48, 0.75);
-  --default-transition-time: 0.2s;
+  --default-transition-time: 0.3s;
 }
 
 * {
@@ -62,11 +62,24 @@ nav ul .user-action-buttons #nav-volunteer-link {
   background-color: var(--accent-yellow);
   color: var(--darkest-blue);
 }
+nav ul .user-action-buttons #nav-volunteer-link:hover {
+  background-color: var(--light-blue);
+  transition: var(--default-transition-time);
+}
 nav ul .user-action-buttons #nav-donate-link {
   background-color: var(--accent-red);
 }
+nav ul .user-action-buttons #nav-donate-link:hover {
+  background-color: var(--light-blue);
+  transition: var(--default-transition-time);
+}
 nav ul .social-icons a {
   margin-right: -15px;
+}
+nav ul .social-icons a:hover {
+  position: relative;
+  bottom: 3px;
+  transition: var(--default-transition-time);
 }
 
 #hero {
@@ -254,6 +267,10 @@ footer .footer-section-2 a, footer .footer-section-2 p {
 }
 footer .footer-section-2 a {
   text-decoration: underline;
+}
+footer .footer-section-2 a:hover {
+  color: var(--light-blue);
+  transition: var(--default-transition-time);
 }
 
 /*# sourceMappingURL=styles.css.map */
