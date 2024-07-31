@@ -221,7 +221,6 @@ nav {
 }
 
 #about {
-  border: 5px solid purple;
   margin: 5rem 13rem; 
 
   h1{
@@ -268,6 +267,47 @@ nav {
       font-family: var(--default-font-family-body);
       height: 40vh;
       max-width: 40%;
+    }
+  }
+}
+
+footer {
+  background-color: var(--dark-blue);
+  padding: 5rem 4rem;
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 1rem;
+  font-size: 13px;
+
+  .footer-section-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    .logo {
+      width: 12rem;
+    }  
+
+    p {
+      font-family: var(--default-font-family-body);
+      border: 1px solid white;
+      padding: 10px 50px;
+    }
+  }
+
+  .footer-section-2 {
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+
+    a, p {
+      font-family: var(--default-font-family-body);
+    } 
+
+    a {
+      text-decoration: underline;
     }
   }
 }
