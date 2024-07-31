@@ -14,16 +14,13 @@
   --box-shadow-color: rgb(100, 100, 100);
   /* --spacing-small: 10px;
   --spacing-medium: 20px; */
+  --default-transition-time: 0.2s;
 }
 
 * {
   font-family: var(--default-font-family);
   font-weight: var(--default-font-weight);
   color: var(--default-text-color);
-}
-
-body {
-  background: var(--dark-blue);
 }
 
 h1 {
@@ -92,7 +89,7 @@ nav ul .social-icons a {
 }
 #hero .hero-form-container form {
   display: grid;
-  grid-template: "email email" auto "phone zip" auto "signup signup" auto;
+  grid-template-areas: "email email" "phone zip" "signup signup";
   gap: 10px;
   width: 75%;
 }
@@ -107,20 +104,16 @@ nav ul .social-icons a {
   color: white;
 }
 #hero .hero-form-container form #email {
-  grid-column: 1/-1;
-  grid-row: 1;
+  grid-area: email;
 }
 #hero .hero-form-container form #phone {
-  grid-column: 1/2;
-  grid-row: 2;
+  grid-area: phone;
 }
 #hero .hero-form-container form #zip {
-  grid-column: 2/-1;
-  grid-row: 2;
+  grid-area: zip;
 }
 #hero .hero-form-container form button {
-  grid-column: 1/-1;
-  grid-row: 3;
+  grid-area: signup;
   height: 3rem;
   border: none;
   border-radius: 2rem;
@@ -129,16 +122,60 @@ nav ul .social-icons a {
   font-size: 1.2rem;
   font-weight: 700;
 }
-#hero .hero-form-container form button :hover {
+#hero .hero-form-container form button[type=submit]:hover {
   cursor: pointer;
-}
-#hero .hero-form-container form button[type=submit] {
-  cursor: pointer;
+  background-color: var(--accent-yellow);
+  transition: var(--default-transition-time);
 }
 #hero #hero-img {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+#donate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to right, var(--dark-blue), var(--medium-blue));
+  width: 80vw;
+  margin: 5rem auto;
+  padding: 3rem 5rem;
+}
+#donate h1 {
+  width: fit-content;
+}
+#donate .donation-links-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+#donate .donation-links-container a {
+  width: 45%;
+  border: 3px solid var(--light-blue);
+  background-color: var(--darkest-blue);
+}
+#donate .donation-links-container a h1 {
+  margin: 0 auto;
+}
+#donate .donation-links-container a span {
+  font-size: 30px;
+}
+#donate .donation-links-container a:hover {
+  border-color: var(--darkest-blue);
+  background-color: var(--accent-yellow);
+  cursor: pointer;
+  transition: var(--default-transition-time);
+}
+#donate .donation-links-container a:hover h1,
+#donate .donation-links-container a:hover span {
+  color: var(--darkest-blue);
+  transition: var(--default-transition-time);
 }
 
 /*# sourceMappingURL=styles.css.map */

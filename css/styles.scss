@@ -17,6 +17,7 @@
   --box-shadow-color: rgb(100, 100, 100);
   /* --spacing-small: 10px;
   --spacing-medium: 20px; */
+  --default-transition-time: 0.2s;
 }
 
 * {
@@ -26,7 +27,7 @@
 }
 
 body {
-  background: var(--dark-blue); // remove this?
+  // background: var(--dark-blue); // remove this?
 }
 
 h1 {
@@ -107,10 +108,10 @@ nav {
 
     form {
       display: grid;
-      grid-template:
-        "email email" auto
-        "phone zip" auto
-        "signup signup" auto;
+      grid-template-areas:
+        "email email"
+        "phone zip"
+        "signup signup";
       gap: 10px;
       width: 75%;
 
@@ -127,23 +128,19 @@ nav {
       }
 
       #email {
-        grid-column: 1 / -1;
-        grid-row: 1;
+        grid-area: email;
       }
 
       #phone {
-        grid-column: 1 / 2;
-        grid-row: 2;
+        grid-area: phone;
       }
 
       #zip {
-        grid-column: 2 / -1;
-        grid-row: 2;
+        grid-area: zip;
       }
 
       button {
-        grid-column: 1 / -1;
-        grid-row: 3;
+        grid-area: signup;
         height: 3rem;
         border: none;
         border-radius: 2rem;
@@ -151,15 +148,13 @@ nav {
         background-color: var(--light-blue);
         font-size: 1.2rem;
         font-weight: 700;
-
-        :hover{
-          cursor: pointer;
-        }
       }
     }
 
-    form button[type="submit"] {
+    form button[type="submit"]:hover {
       cursor: pointer;
+      background-color: var(--accent-yellow);
+      transition: var(--default-transition-time);
     }
   }
 
@@ -170,3 +165,76 @@ nav {
   }
 }
 
+#donate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to right, var(--dark-blue), var(--medium-blue));
+  width: 80vw;
+  margin: 5rem auto;
+  padding: 3rem 5rem;
+
+  h1 {
+    width: fit-content;
+  }
+
+  .donation-links-container {
+    // border: 1px solid red;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 2rem;
+
+    a {
+      width: 45%;
+      border: 3px solid var(--light-blue);
+      background-color: var(--darkest-blue);
+
+      h1 {
+        margin: 0 auto;
+      }
+
+      span {
+        font-size: 30px;
+      }
+    }
+
+    a:hover {
+      border-color: var(--darkest-blue);
+      background-color: var(--accent-yellow);
+      cursor: pointer;
+      transition: var(--default-transition-time);
+
+      h1,
+      span {
+        color: var(--darkest-blue);
+        transition: var(--default-transition-time);
+      }
+    }
+
+    // display: grid;
+    // grid-template-areas:
+    //   "twentyFive other"
+    //   "fifty oneHundred";
+
+    // .donation-link-25 {
+    //   grid-area: twentyFive;
+    // }
+
+    // .donation-link-other {
+    //   grid-area: other;
+    // }
+
+    // .donation-link-50 {
+    //   grid-area: fifty;
+    // }
+
+    // .donation-link-100 {
+    //   grid-area: oneHundred;
+    // }
+  }
+}
