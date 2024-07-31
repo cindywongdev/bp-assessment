@@ -1,0 +1,75 @@
+:root {
+  --darkest-blue: #013f69;
+  --dark-blue: #094977;
+  --medium-blue: #0090c4;
+  --light-blue: #6dd7ff;
+  --accent-yellow: #f9b712;
+  --accent-red: #c31030;
+//   --font-size-h1: 2rem;
+//   --font-size-h2: 1.5rem;
+//   --font-weight-h1: bold;
+//   --font-weight-h2: semi-bold;
+//   --font-weight-h3: normal;
+  --default-font-family: 'Oswald', sans-serif;
+  --default-font-weight: 450;
+  /* --spacing-small: 10px;
+  --spacing-medium: 20px; */
+}
+
+* {
+    font-family: var(--default-font-family);
+    font-weight: var(--default-font-weight);
+}
+
+/* remove this? */
+body {
+  background-color: blue;
+  color: white;
+}
+
+a, button {
+  :hover{
+    cursor: pointer;
+  }
+}
+
+nav {
+  background: linear-gradient(to right, var(--dark-blue), var(--medium-blue));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem 1rem 3rem;
+ 
+  .logo {
+    width: 10rem;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    // gap: 2rem;
+
+    .user-action-buttons {
+        a {
+            padding: 5px 30px 5px 30px;
+            border-radius: 10rem;
+            margin-right: 20px;
+        }
+
+        #nav-volunteer-link {
+            background-color: var(--accent-yellow);
+            color: var(--darkest-blue);
+        }
+        #nav-donate-link {
+            background-color: var(--accent-red);
+        }
+    }
+
+    .social-icons a {
+        margin-right: -5px;
+    }
+  }
+}
+
+/*# sourceMappingURL=styles.scss.map */
