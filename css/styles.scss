@@ -52,6 +52,10 @@ nav {
     width: 10rem;
   }
 
+  .menu-toggle {
+    display: none;
+  }
+
   ul {
     list-style: none;
     display: flex;
@@ -414,6 +418,58 @@ footer {
 
 // phones
 @media (max-width: 540px) {
+  nav {
+
+    #nav-volunteer-link,
+    #nav-donate-link {
+      margin-right: 0;
+    }
+
+    .menu-toggle {
+      height: 3rem;
+      display: block;
+    }
+
+    ul {
+      display: none;
+
+      flex-direction: column;
+      position: absolute;
+      right: 0;
+      top: 5.7rem;
+      background-color: var(--dark-blue);
+      border-radius: 0 0 2rem 2rem;
+      z-index: 1;
+      padding: 1rem;
+      
+      .user-action-buttons {
+        // border: 1px solid pink;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .social-icons {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-evenly;
+
+        a {
+          margin: 0px -10px;
+        }
+
+        img {
+          height: 50px;
+        }
+      }
+    }
+
+    ul.active {
+      display: block;
+    }
+  }
+
   #hero {
     .hero-form-container {
       .logo {
