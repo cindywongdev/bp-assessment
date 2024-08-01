@@ -124,10 +124,6 @@ nav {
 
     form {
       display: grid;
-      // grid-template-areas:
-      //   "email email"
-      //   "phone zip"
-      //   "signup signup";
       grid-template-columns: minmax(100px, 1fr) minmax(100px, 1fr);
       grid-template-rows: 1fr 1fr 1fr;
 
@@ -147,25 +143,21 @@ nav {
       }
 
       #email {
-        // grid-area: email;
         grid-column: 1 / span 2;
         grid-row: 1;
       }
 
       #phone {
-        // grid-area: phone;
         grid-column: 1;
         grid-row: 2;
       }
 
       #zip {
-        // grid-area: zip;
         grid-column: 2;
         grid-row: 2;
       }
 
       button {
-        // grid-area: signup;
         grid-column: 1 / span 2;
         grid-row: 3;
 
@@ -436,7 +428,6 @@ footer {
       padding: 1rem;
       
       .user-action-buttons {
-        // border: 1px solid pink;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -529,7 +520,7 @@ footer {
   }
 }
 
-// smallest phone (iphone SE)
+// smallest phones
 @media (max-width: 475px) {
   #hero {
     // overflow: hidden;

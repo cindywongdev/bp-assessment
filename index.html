@@ -15,6 +15,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+    <script src="js/supabase.min.js"></script>
+    <script src="js/main.js"></script>
 </head>
 
 <body>
@@ -22,7 +25,7 @@
         <nav>
             <img class="logo" src="images/SamanthaHall_Logo_reversed.png"
                 alt="White logo with the text 'Samantha Hall' in large font next to a star, and a ribbon below with 'Democrat for Senate' inside">
-            
+
             <img class="menu-toggle" src="icons/hamburger-menu.svg" alt="hamburger-menu-icon">
 
             <ul>
@@ -48,15 +51,15 @@
             <img class="logo" src="images/SamanthaHall_Logo_reversed.png"
                 alt="White logo with the text 'Samantha Hall' in large font next to a star, and a ribbon below with 'Democrat for Senate' inside">
             <h1>STAY IN TOUCH <br> WITH SAMANTHA</h1>
-            <form action="" method="">
+            <form id="newsletter-signup-form">
                 <label for="email"></label>
-                <input type="text" id="email" name="email" placeholder="Email" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
 
                 <label for="phone"></label>
-                <input type="text" id="phone" name="phone" placeholder="Phone" required>
+                <input type="text" id="phone" name="phone" placeholder="Phone" pattern="\d{10}" required>
 
                 <label for="zip"></label>
-                <input type="text" id="zip" name="zip" placeholder="ZIP" required>
+                <input type="text" id="zip" name="zip" placeholder="ZIP" pattern="\d{5}" required>
 
                 <button type="submit">SIGN UP</button>
             </form>
@@ -78,7 +81,7 @@
             <a>
                 <h1><span>$</span>50</h1>
             </a>
-            <a >
+            <a>
                 <h1><span>$</span>100</h1>
             </a>
         </div>
@@ -87,25 +90,28 @@
     <section id="about">
         <h1>MEET SAMANTHA</h1>
         <div class="about-section-1">
-            <img src="/images/about-photo_2.png" alt="Abstract representation of a person with a small circle on top of a larger circle, set against a blurry background of greenery">
+            <img src="/images/about-photo_2.png"
+                alt="Abstract representation of a person with a small circle on top of a larger circle, set against a blurry background of greenery">
             <div class="about-section-banner">
                 <p>Lorem ipsum dolor sit amet, <br> consectetur adipiscing elit</p>
             </div>
         </div>
         <div class="about-section-2">
-            <img src="images/about-photo_1.jpg" alt="Group of four people of different ethnicities, including one person in a wheelchair, engaging in a friendly conversation in an office setting">
+            <img src="images/about-photo_1.jpg"
+                alt="Group of four people of different ethnicities, including one person in a wheelchair, engaging in a friendly conversation in an office setting">
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
                 ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
                 fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error autem vel eum iure 
+                deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error autem vel eum iure
                 accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
                 quasi architecto beatae vitae dicta sunt explicabo.
                 <br>
                 <br>
                 Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut
-                aliquid ex ea commodi consequatur? Quis esse consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+                aliquid ex ea commodi consequatur? Quis esse consequatur, vel illum qui dolorem eum fugiat quo voluptas
+                nulla pariatur?
             </p>
         </div>
     </section>
@@ -122,7 +128,7 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <!-- <script src="js/main.js"></script> -->
 </body>
 
 </html>
