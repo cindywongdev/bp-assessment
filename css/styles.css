@@ -198,7 +198,7 @@ nav ul .social-icons a:hover {
 }
 
 #about {
-  margin: 5rem 13rem;
+  margin: 5rem 11rem;
 }
 #about h1 {
   color: var(--dark-text-color);
@@ -280,7 +280,7 @@ footer .footer-section-2 a:hover {
   transition: var(--default-transition-time);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1280px) {
   nav .logo {
     width: 7rem;
   }
@@ -295,6 +295,9 @@ footer .footer-section-2 a:hover {
     clip-path: none;
     width: 100%;
     padding: 7rem 6rem 5rem 5rem;
+  }
+  #hero .hero-form-container .logo {
+    width: 10rem;
   }
   #hero #hero-img {
     height: 400px;
@@ -375,9 +378,6 @@ footer .footer-section-2 a:hover {
   #hero {
     height: auto;
     margin-top: 0;
-  }
-  #hero .hero-form-container .logo {
-    width: 10rem;
   }
   #hero .hero-form-container h1 {
     margin: 1rem 0;
