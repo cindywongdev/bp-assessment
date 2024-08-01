@@ -100,7 +100,8 @@ nav ul .social-icons a:hover {
 }
 #hero .hero-form-container form {
   display: grid;
-  grid-template-areas: "email email" "phone zip" "signup signup";
+  grid-template-columns: minmax(100px, 1fr) minmax(100px, 1fr);
+  grid-template-rows: 1fr 1fr 1fr;
   gap: 10px;
   width: 75%;
 }
@@ -115,16 +116,20 @@ nav ul .social-icons a:hover {
   color: white;
 }
 #hero .hero-form-container form #email {
-  grid-area: email;
+  grid-column: 1/span 2;
+  grid-row: 1;
 }
 #hero .hero-form-container form #phone {
-  grid-area: phone;
+  grid-column: 1;
+  grid-row: 2;
 }
 #hero .hero-form-container form #zip {
-  grid-area: zip;
+  grid-column: 2;
+  grid-row: 2;
 }
 #hero .hero-form-container form button {
-  grid-area: signup;
+  grid-column: 1/span 2;
+  grid-row: 3;
   height: 3rem;
   border: none;
   border-radius: 2rem;
@@ -260,7 +265,8 @@ footer .footer-section-2 {
   justify-content: end;
   gap: 1rem;
 }
-footer .footer-section-2 a, footer .footer-section-2 p {
+footer .footer-section-2 a,
+footer .footer-section-2 p {
   font-family: var(--default-font-family-body);
 }
 footer .footer-section-2 a {
@@ -304,6 +310,9 @@ footer .footer-section-2 a:hover {
     width: 80vw;
     margin-top: 15px;
   }
+  #about .about-section-2 {
+    justify-content: center;
+  }
   #about .about-section-2 p {
     max-width: 100%;
     overflow: scroll;
@@ -324,17 +333,58 @@ footer .footer-section-2 a:hover {
     margin-top: 15rem;
   }
 }
-@media (max-width: 430px) {
+@media (max-width: 540px) {
+  #hero .hero-form-container .logo {
+    width: 10rem;
+  }
+  #hero .hero-form-container h1 {
+    margin: 1rem 0;
+  }
   #about {
     margin: 2rem;
+  }
+  #about h1 {
+    width: fit-content;
+    margin: 0 auto;
   }
   #about img {
     width: 80vw;
     object-fit: contain;
   }
+  #about .about-section-1 .about-section-banner p {
+    font-size: 1rem;
+  }
   #about .about-section-2 p {
     width: 80vw;
     overflow: scroll;
+  }
+  footer .footer-section-1 {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.8rem;
+  }
+  footer .footer-section-1 .logo {
+    width: 12rem;
+  }
+  footer .footer-section-1 p {
+    padding: 10px 20px;
+  }
+  footer .footer-section-2 {
+    justify-content: center;
+  }
+}
+@media (max-width: 412px) {
+  #hero .hero-form-container {
+    padding: 3rem;
+  }
+  #hero .hero-form-container h1 {
+    font-size: 2rem;
+  }
+  #about .about-section-1 .about-section-banner {
+    padding: 1.5rem;
+  }
+  #about .about-section-1 .about-section-banner p {
+    font-size: 18px;
   }
 }
 
