@@ -288,6 +288,7 @@ footer .footer-section-2 a:hover {
     display: flex;
     flex-direction: column-reverse;
     position: relative;
+    margin-top: 25rem;
   }
   #hero .hero-form-container {
     position: relative;
@@ -328,15 +329,10 @@ footer .footer-section-2 a:hover {
 }
 @media (max-width: 820px) {
   #hero {
-    margin-top: 6rem;
+    margin-top: 22rem;
   }
 }
-@media (max-width: 768px) {
-  #hero {
-    margin-top: 15rem;
-  }
-}
-@media (max-width: 540px) {
+@media (max-width: 715px) {
   nav #nav-volunteer-link,
   nav #nav-donate-link {
     margin-right: 0;
@@ -376,11 +372,19 @@ footer .footer-section-2 a:hover {
   nav ul.active {
     display: block;
   }
+  #hero {
+    height: auto;
+    margin-top: 0;
+  }
   #hero .hero-form-container .logo {
     width: 10rem;
   }
   #hero .hero-form-container h1 {
     margin: 1rem 0;
+  }
+  #hero #hero-img {
+    height: auto;
+    object-fit: cover;
   }
   #about {
     margin: 2rem;
@@ -415,7 +419,7 @@ footer .footer-section-2 a:hover {
     justify-content: center;
   }
 }
-@media (max-width: 412px) {
+@media (max-width: 475px) {
   #hero .hero-form-container {
     padding: 3rem;
   }
