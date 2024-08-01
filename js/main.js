@@ -39,13 +39,14 @@ document.addEventListener('DOMContentLoaded', function () {
             const submitButton = form.querySelector('button');
             submitButton.textContent = "SUBMITTED!"
             // make yellow hover color last for duration of submitted text
-            submitButton.style.backgroundColor = '#f9b712';
+            submitButton.classList.add('clicked')
             form.reset();
 
             setTimeout(() => {
                 submitButton.textContent = "SIGN UP"
                 // change button background back to default
-                submitButton.style.backgroundColor = '#6dd7ff'
+                submitButton.classList.remove('clicked')
+
             }, 2000);
         }
     });

@@ -33,6 +33,10 @@ button :hover {
   cursor: pointer;
 }
 
+.clicked {
+  background-color: var(--accent-yellow) !important;
+}
+
 nav {
   z-index: 1000;
   position: relative;

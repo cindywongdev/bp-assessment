@@ -35,6 +35,11 @@ button {
   }
 }
 
+// set submit button bg color on click
+.clicked {
+  background-color: var(--accent-yellow) !important;
+}
+
 nav {
   // position: sticky;
   // position: -webkit-sticky;
